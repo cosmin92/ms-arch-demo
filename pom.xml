@@ -52,6 +52,7 @@
 
     <modules>
         <module>registry-service</module>
+        <module>common</module>
     </modules>
 
     <dependencyManagement>
