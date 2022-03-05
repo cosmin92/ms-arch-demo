@@ -1,0 +1,25 @@
+_id: req_wrk_bbfde1e140464c8ab2dd3bbdcf137957a3d761441
+type: Request
+parentId: wrk_bbfde1e140464c8ab2dd3bbdcf137957
+modified: 1646489425195
+created: 1646394269930
+url: "{{ base_url }}/profiles/1"
+name: Retrieve a profile given its id
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: size
+    disabled: true
+    value: "0"
+    id: pair_256c6135c51f410e91323464fbab7000
+headers: []
+authentication: {}
+metaSortKey: -1646394269930
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

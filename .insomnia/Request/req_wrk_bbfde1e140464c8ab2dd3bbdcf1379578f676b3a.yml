@@ -1,0 +1,31 @@
+_id: req_wrk_bbfde1e140464c8ab2dd3bbdcf1379578f676b3a
+type: Request
+parentId: wrk_bbfde1e140464c8ab2dd3bbdcf137957
+modified: 1646489418720
+created: 1646389495480
+url: "{{ base_url }}/profiles"
+name: Create a new profile
+description: Ciao
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"id": "1",
+      "firstName": "Cosmin",
+      "lastName": "Cozma"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_69a6d22aa999477a9e57a66969ecddda
+authentication: {}
+metaSortKey: -1646389495481
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
