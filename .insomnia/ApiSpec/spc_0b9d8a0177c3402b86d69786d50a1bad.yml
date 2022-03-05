@@ -1,0 +1,106 @@
+_id: spc_0b9d8a0177c3402b86d69786d50a1bad
+type: ApiSpec
+parentId: wrk_bbfde1e140464c8ab2dd3bbdcf137957
+modified: 1646489309481
+created: 1646387875740
+fileName: api-spec.yaml
+contents: >
+  ---
+
+  openapi: "3.0.3"
+
+  info:
+    title: "Microservice Architecture Demo"
+    description: "API for testing and prototyping andpoint of a microservice architecture"
+    version: "0.1.0"
+  servers:
+    - url: "http://localhost:8181"
+      description: "Local environment"
+  paths:
+    /profiles:
+      post:
+        tags:
+          - "Profiles"
+        summary: "Create a new profile"
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/createPost"
+              examples:
+                example-one:
+                  summary: "Valid profile"
+                  value:
+                    firstName: "Jon"
+                    lastName: "Washington"
+                example-two:
+                  summary: "Invalid profile"
+                  value:
+                    firstName: "Jon"
+        responses:
+          "201":
+            description: "A profile was created"
+          '400':
+            description: "There is some erro with "
+
+      get:
+        tags:
+          - "Profiles"
+        summary: "Retrieve a prifile given its id"
+        parameters:
+          - name: "size"
+            in: "query"
+            description: "The page size"
+            required: false
+            schema:
+              type: "integer"
+          - name: "number"
+            in: "query"
+            schema:
+              type: "integer"
+        responses:
+          "200":
+            description: "Ok"
+    /profiles/{id}:
+      parameters:
+        - name: id
+          in: path
+          description: ID of pet to use
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          style: simple
+      get:
+        tags:
+          - "Profiles"
+        description: Returns pets based on ID
+        summary: Find pets by ID
+        operationId: getPetsById
+        responses:
+          '200':
+            description: pet response
+            content:
+              '*/*':
+                schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/createPost'
+
+  components:
+    schemas:
+      createPost:
+        type: "object"
+        properties:
+          id:
+            type: string
+            description: "Unique identifier of the user"
+          firstName:
+            type: "string"
+            description: "The profile's first name"
+          lastName:
+            type: "string"
+            description: "The profile's last name"
+contentType: yaml
