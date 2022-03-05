@@ -46,6 +46,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
         <junit-platform.version>5.3.1</junit-platform.version>
         <java.version>11</java.version>
     </properties>
