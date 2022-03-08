@@ -1,2 +1,20 @@
 server:
   port: ${PORT:8181}
+
+logging:
+  level:
+    liquibase: INFO
+
+spring:
+  jpa:
+    open-in-view: off
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:registry;
+    username: sa
+    password: sa
+  h2:
+    console:
+      enabled: true

@@ -4,6 +4,8 @@ import com.uxied.arch.registry.domain.Profile;
 import com.uxied.arch.registry.repository.ProfileRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -19,14 +21,20 @@ public class ProfileService {
         return profileRepository.findById(id);
     }
 
-    /**
-     *
-     *
-     * @param newProfile - Profile instance to be saved.
-     * @return The newly created profile's id
-     */
-    public String save(Profile newProfile){
-        return profileRepository.save(newProfile).getId();
+    public Page<Profile> getPage(Pageable pageable) {
+        return profileRepository.findAll(pageable);
     }
+
+    /**
+     * Insert a new profile into <i>profiles</i> table.
+     *
+     * @param profile Profile instance to be saved.
+     * @return The newly created profile's id
+     * @throws
+     */
+    public String save(Profile profile) {
+        return profileRepository.save(profile).getId();
+    }
+
 
 }
