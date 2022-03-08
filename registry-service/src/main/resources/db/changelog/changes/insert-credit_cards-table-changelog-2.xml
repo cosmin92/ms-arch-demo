@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet id="1646686554326" author="Cosmin Fane Cozma">
+        <insert tableName="credit_cards">
+            <column name="number" value="4133333567279374"/>
+            <column name="brand" value="Visa"/>
+            <column name="expiry_month" value="9"/>
+            <column name="expiry_year" value="2022"/>
+            <column name="owner" value="53530dbf-addd-4ab4-adfc-8333552752a6"/>
+        </insert>
+
+        <insert tableName="credit_cards">
+            <column name="number" value="4633016829135709"/>
+            <column name="brand" value="Mastercard"/>
+            <column name="expiry_month" value="9"/>
+            <column name="expiry_year" value="2022"/>
+            <column name="owner" value="53530dbf-addd-4ab4-adfc-8333552752a6"/>
+        </insert>
+
+        <insert tableName="credit_cards">
+            <column name="number" value="4278222099455146"/>
+            <column name="brand" value="American Express"/>
+            <column name="expiry_month" value="9"/>
+            <column name="expiry_year" value="2022"/>
+            <column name="owner" value="53530dbf-addd-4ab4-adfc-8333552752d6"/>
+        </insert>
+<!--Visa, Mastercard, American Express, Discover, JCB -->
+        <insert tableName="credit_cards">
+            <column name="number" value="4349657123993932"/>
+            <column name="brand" value="Mastercard"/>
+            <column name="expiry_month" value="9"/>
+            <column name="expiry_year" value="2022"/>
+            <column name="owner" value="53530dbf-addd-4ab4-adfc-8333552752d6"/>
+        </insert>
+
+        <insert tableName="credit_cards">
+            <column name="number" value="4530005340024215"/>
+            <column name="brand" value="Discover"/>
+            <column name="expiry_month" value="9"/>
+            <column name="expiry_year" value="2022"/>
+            <column name="owner" value="1ae875ef-f86d-4ab7-af21-b513c7959b67"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
