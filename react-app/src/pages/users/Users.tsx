@@ -29,7 +29,7 @@ export class Users extends React.Component<any, { profiles: any }> {
             {
                 this.state.profiles
                     .map((profile: { id: React.Key | null | undefined; name: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }) =>
-                        <li key={profile.id}>{profile.name}</li>
+                        <li key={profile.id}>{profile.id} - {profile.name}</li>
                     )
             }
         </ul>;
